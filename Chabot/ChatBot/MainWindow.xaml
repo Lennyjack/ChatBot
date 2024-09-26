@@ -1,0 +1,75 @@
+﻿<Window x:Class="idk.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:idk"
+        mc:Ignorable="d"
+        Title="ChatBot"
+        Height="450"
+        Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="60*" />
+            <ColumnDefinition Width="10*" />
+            <ColumnDefinition Width="5*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="60*" />
+            <RowDefinition Height="30*" />
+            <RowDefinition Height="5*" />
+        </Grid.RowDefinitions>
+        <TextBox Name="ChatDisplay"
+                 HorizontalAlignment="Center"
+                 Height="175"
+                 VerticalAlignment="Center"
+                 Width="500"
+                 IsReadOnly="True"
+                 TextWrapping="Wrap"
+                 VerticalScrollBarVisibility="Auto"
+                 Margin="0,0,0,0"
+                 Grid.RowSpan="2"
+                 Grid.Column="1" />
+        <TextBox x:Name="UserInput"
+                 HorizontalAlignment="Center"
+                 Height="85"
+                 VerticalAlignment="Center"
+                 Width="400"
+                 TextWrapping="Wrap"
+                 Margin="0,0,0,0"
+                 Grid.Row="2"
+                 Grid.Column="1"/>
+        <Button Content="Send"
+                x:Name="btnSend"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Width="139"
+                Height="50"
+                Click="SendMessage_Click"
+                FontSize="24"
+                Grid.Row="2"
+                Grid.Column="2"
+                Grid.ColumnSpan="3"/>
+        <Button Content="Chatbot"
+                x:Name="Chatbot"
+                HorizontalAlignment="Right"
+                Margin="0,0,10,0"
+                VerticalAlignment="Center"
+                Grid.Column="1"
+                Width="75"
+                Height="30"
+                Click="Chatbot_Click" />
+        <Button Content="Hinzu..."
+                x:Name="Hinzu"
+                HorizontalAlignment="Left"
+                Margin="10,0,0,0"
+                VerticalAlignment="Center"
+                Grid.Column="2"
+                Width="75"
+                Height="30"
+                Click="Hinzu_Click_1" />
+
+    </Grid>
+</Window>
